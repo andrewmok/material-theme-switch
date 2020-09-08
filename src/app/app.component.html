@@ -1,20 +1,18 @@
-<div class="mat-app-background">
-  <app-menu></app-menu>
-  <mat-card>
-    <mat-card-content>
-      <mat-form-field [formGroup]="form">
-        <mat-label>Theme selector</mat-label>
-        <mat-select [formControlName]="THEME">
-          <mat-option
-            *ngFor="let option of options"
-            value="{{option.value}}"
-          >
-            {{option.label}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-    </mat-card-content>
-  </mat-card>
-  <app-main-page></app-main-page>
-  <router-outlet></router-outlet>
-</div>
+<app-menu></app-menu>
+<mat-card>
+  <mat-card-content>
+    <mat-form-field [formGroup]="form">
+      <mat-label>Theme selector</mat-label>
+      <mat-select [formControlName]="THEME">
+        <mat-option
+          *ngFor="let option of options"
+          value="{{option.value}}"
+        >
+          {{option.label}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card-content>
+</mat-card>
+<app-main-page></app-main-page>
+<router-outlet></router-outlet>
