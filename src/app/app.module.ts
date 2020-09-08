@@ -11,7 +11,11 @@ import {
   MatIconModule,
   MatMenuModule,
   MatToolbarModule,
-  MatDividerModule, MatFormFieldModule, MatSelectModule
+  MatDividerModule,
+  MatFormFieldModule,
+  MatSelectModule,
+  MatProgressBarModule,
+  MatCardModule, MatProgressSpinnerModule, MatInputModule, MatRadioModule, MatSlideToggleModule
 } from '@angular/material';
 import {FormBuilder, ReactiveFormsModule} from '@angular/forms';
 
@@ -32,7 +36,13 @@ import {FormBuilder, ReactiveFormsModule} from '@angular/forms';
     MatDividerModule,
     MatFormFieldModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatInputModule,
+    MatRadioModule,
+    MatSlideToggleModule
   ],
   providers: [FormBuilder],
   bootstrap: [AppComponent]
