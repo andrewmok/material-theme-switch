@@ -6,6 +6,11 @@ $default-accent: mat-palette($mat-light-blue);
 $default-theme: mat-light-theme($default-primary, $default-accent);
 @include angular-material-theme($default-theme);
 
+.default-dark {
+  $default-dark-theme: mat-dark-theme($default-primary, $default-accent);
+  @include angular-material-theme($default-dark-theme);
+}
+
 .purple {
   $purple-primary: mat-palette($mat-purple);
   $purple-accent: mat-palette($mat-light-green);

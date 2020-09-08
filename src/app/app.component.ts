@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   public readonly title = 'material-theme-switch';
   public readonly options = [
     {label: 'Default', value: 'default'},
+    {label: 'Default dark', value: 'default-dark'},
     {label: 'Pink', value: 'pink'},
     {label: 'Amber', value: 'amber'},
     {label: 'Purple', value: 'purple'}
