@@ -1,9 +1,6 @@
 @import "~@angular/material/theming";
+@import "mixins";
 @include mat-core();
-
-$app-primary: mat-palette($mat-grey);
-$app-accent:  mat-palette($mat-light-blue);
-$app-warn:    mat-palette($mat-pink);
 
 $default-primary: mat-palette($mat-light-green);
 $default-accent: mat-palette($mat-light-blue);
@@ -12,6 +9,7 @@ $default-theme: mat-light-theme($default-primary, $default-accent);
 
 .default-dark {
   $default-dark-theme: mat-dark-theme($default-primary, $default-accent);
+  @include theme-color-grabber($default-dark-theme);
   @include angular-material-theme($default-dark-theme);
 }
 
@@ -19,6 +17,7 @@ $default-theme: mat-light-theme($default-primary, $default-accent);
   $purple-primary: mat-palette($mat-purple);
   $purple-accent: mat-palette($mat-light-green);
   $purple-theme: mat-light-theme($purple-primary, $purple-accent);
+  @include theme-color-grabber($purple-theme);
   @include angular-material-theme($purple-theme);
 }
 
@@ -26,6 +25,7 @@ $default-theme: mat-light-theme($default-primary, $default-accent);
   $pink-primary: mat-palette($mat-pink);
   $pink-accent: mat-palette($mat-yellow);
   $pink-theme: mat-light-theme($pink-primary, $pink-accent);
+  @include theme-color-grabber($pink-theme);
   @include angular-material-theme($pink-theme);
 }
 
@@ -33,5 +33,8 @@ $default-theme: mat-light-theme($default-primary, $default-accent);
   $gold-primary: mat-palette($mat-amber);
   $gold-accent: mat-palette($mat-cyan);
   $gold-theme: mat-light-theme($gold-primary, $gold-accent);
+  @include theme-color-grabber($gold-theme);
   @include angular-material-theme($gold-theme);
 }
+
+@include theme-color-grabber($default-theme);

@@ -1,0 +1,22 @@
+@import "~@angular/material/theming";
+
+@mixin theme-color-grabber($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  .background-primary {
+    background-color: mat-color($primary);
+  }
+
+  .background-accent {
+    background-color: mat-color($accent);
+  }
+
+  .text-primary {
+    color: mat-color($primary);
+  }
+
+  .text-accent {
+    color: mat-color($accent);
+  }
+}
